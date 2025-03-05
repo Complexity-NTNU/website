@@ -1,9 +1,10 @@
 export default function Footer() {
   return (
-    <div>
-      <div>
-        Some text
-      </div>
-    </div>
-  );
+		<footer className="bg-[#1E1E1E] w-full h-96 mt-96">
+			<div className="">Some text</div>
+			<div className="">Some text</div>
+			<div className="">Some text</div>
+			<div className="">Some text</div>
+		</footer>
+	);
 }

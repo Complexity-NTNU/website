@@ -9,7 +9,9 @@
   --default-font: var(--font-roboto), Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+
+/* implement later (probably should do it now :( ) */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #343434;
     --foreground: #d9d9d9;
@@ -19,6 +21,10 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  font-family: var(--default-font), sans-serif;
+} */
+
+body {
   font-family: var(--default-font), sans-serif;
 }
 

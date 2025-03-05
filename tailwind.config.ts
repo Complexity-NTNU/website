@@ -22,11 +22,17 @@ export default {
       keyframes: {
         fadeUp: {
           "0%": { opacity: "0", transform: "translateY(20px)" },
+          "50%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        slide: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       animation: {
-        fadeUp: "fadeUp 0.5s ease-out forwards",
+        fadeUp: "fadeUp 1s ease-out forwards",
+        slide: 'slide 30s linear infinite',
       },
     },
   },
