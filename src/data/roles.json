@@ -1,0 +1,147 @@
+{
+  "board": [
+    {
+      "name": "Project Director",
+      "category": "board",
+      "description": "The Project Director is in charge of guiding the overall vision of our project and making sure every part of our work lines up with our main goals. This role mixes leadership with hands-on project management and involves working closely with team members and stakeholders to push growth and collaboration.",
+      "responsibilities": [
+        "Guide strategic direction and vision",
+        "Ensure project alignment with organizational goals",
+        "Facilitate leadership meetings and stakeholder engagement"
+      ],
+      "will_learn": [
+        "Advanced leadership and management strategies",
+        "Strategic planning and execution",
+        "High-level communication and organizational dynamics"
+      ]
+    }
+  ],
+  "technical": [
+    {
+      "name": "AI Research Scientist",
+      "category": "technical",
+      "description": "The AI Research Scientist works on exploring new ideas in artificial intelligence by running experiments and testing innovative methods to improve our models. This job is about thinking critically and working with different teams to turn research into real solutions.",
+      "responsibilities": [
+        "Design and execute AI research experiments",
+        "Develop and validate novel AI methodologies",
+        "Collaborate across teams to integrate research findings"
+      ],
+      "will_learn": [
+        "Cutting-edge AI research techniques",
+        "Interdisciplinary collaboration",
+        "Innovative problem-solving in AI"
+      ]
+    },
+    {
+      "name": "Machine Learning Engineer",
+      "category": "technical",
+      "description": "The Machine Learning Engineer is responsible for creating and fine-tuning machine learning models. Working with both the research and data teams, you’ll help build models that are reliable and scalable, turning theoretical ideas into production-ready systems.",
+      "responsibilities": [
+        "Develop and optimize ML models",
+        "Implement scalable machine learning solutions",
+        "Collaborate with researchers and data engineers"
+      ],
+      "will_learn": [
+        "Advanced ML frameworks and algorithms",
+        "Model optimization and deployment techniques",
+        "Scalable system design"
+      ]
+    },
+    {
+      "name": "Data Infrastructure Engineer",
+      "category": "technical",
+      "description": "The Data Infrastructure Engineer designs and maintains our data pipelines to ensure our information is organized, clean, and easy to use. This role supports both AI development and analytics by building systems that keep data flowing smoothly.",
+      "responsibilities": [
+        "Design and manage data pipelines",
+        "Ensure data quality and integrity",
+        "Implement efficient data processing solutions"
+      ],
+      "will_learn": [
+        "Data pipeline automation",
+        "Big data management technologies",
+        "Advanced data quality assurance techniques"
+      ]
+    },
+    {
+      "name": "AI Systems Architect",
+      "category": "technical",
+      "description": "The AI Systems Architect creates the overall blueprint for our AI systems by integrating research with engineering. This role is about designing systems that are scalable and secure, making sure all parts work together efficiently.",
+      "responsibilities": [
+        "Architect scalable and robust AI system frameworks",
+        "Coordinate integration of diverse AI components",
+        "Optimize infrastructure for model training and deployment"
+      ],
+      "will_learn": [
+        "Advanced systems architecture and design",
+        "Cloud infrastructure management",
+        "Integration of AI research and engineering"
+      ]
+    }
+  ],
+  "DevOps": [
+    {
+      "name": "DevOps Engineer",
+      "category": "DevOps",
+      "description": "The DevOps Engineer is responsible for setting up and maintaining our systems for both AI projects and the website. You will manage continuous integration/deployment pipelines and monitor system performance, making sure everything runs reliably and efficiently.",
+      "responsibilities": [
+        "Maintain CI/CD pipelines",
+        "Monitor and optimize cloud infrastructure",
+        "Ensure system reliability and performance"
+      ],
+      "will_learn": [
+        "Advanced DevOps practices",
+        "Cloud platform optimization",
+        "Automated deployment strategies"
+      ]
+    },
+    {
+      "name": "Frontend Developer",
+      "category": "DevOps",
+      "description": "The Frontend Developer builds and updates the user-facing parts of our website. This role involves creating responsive designs and working with designers and backend developers to ensure a smooth user experience across devices.",
+      "responsibilities": [
+        "Develop and maintain UI components",
+        "Collaborate with designers for seamless UX integration",
+        "Ensure cross-browser and cross-device compatibility"
+      ],
+      "will_learn": [
+        "Modern frontend frameworks and best practices",
+        "UI/UX design principles",
+        "Effective cross-functional collaboration"
+      ]
+    }
+  ],
+  "marketing": [
+    {
+      "name": "Marketing Manager",
+      "category": "marketing",
+      "description": "The Marketing Manager is responsible for planning and running marketing campaigns that boost our brand and engage our audience. This role covers everything from social media management to trend analysis, ensuring that our messaging is clear and consistent.",
+      "responsibilities": [
+        "Develop integrated marketing campaigns",
+        "Manage digital and social media channels",
+        "Analyze market trends to drive strategic decisions"
+      ],
+      "will_learn": [
+        "Innovative digital marketing strategies",
+        "Data-driven market analysis",
+        "Brand management and outreach"
+      ]
+    }
+  ],
+  "business": [
+    {
+      "name": "Business Analyst",
+      "category": "business",
+      "description": "The Business Analyst examines our business operations to find ways to improve and grow. This role involves analyzing data, spotting opportunities, and helping plan strategies that make the organization work better overall.",
+      "responsibilities": [
+        "Conduct comprehensive business analysis",
+        "Identify areas for operational improvement",
+        "Support strategic decision-making processes"
+      ],
+      "will_learn": [
+        "Advanced business analytics methodologies",
+        "Process optimization techniques",
+        "Effective stakeholder engagement"
+      ]
+    }
+  ]
+}

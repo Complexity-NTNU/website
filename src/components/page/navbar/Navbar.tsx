@@ -1,10 +1,23 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import NavFooter from './navFooter';
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
+	const [isTop, setIsTop] = useState(true);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsTop(window.scrollY === 0);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 
 	const handleHamburgerClick = () => {
 		setIsOpen(!isOpen);
@@ -17,7 +30,9 @@ export default function Navbar() {
 	];
 
 	return (
-		<div className="fixed bg-[#F1F1F1] inset-x-0 top-0 z-10 border-b border-black/5 dark:border-white/10">
+		<div
+			className={`fixed bg-[#F1F1F1] inset-x-0 top-0 z-10 border-b  ${isTop ? 'border-black/5' : 'border-none'}`}
+		>
 			<div className="max-w-[1440px] mx-auto">
 				<div className="flex h-16 md:h-20 justify-between items-center">
 					<div>
@@ -58,7 +73,7 @@ export default function Navbar() {
 								</li>
 							))}
 							<a href="/applications">
-								<div className="bg-[#131313] text-[#F1F1F1] px-10 py-3 rounded-2xl hover:bg-[#3A3A3A] transition">
+								<div className="bg-[#343434] text-[#F1F1F1] px-8 py-2 rounded-xl hover:bg-[#3A3A3A] transition">
 									Apply
 								</div>
 							</a>
@@ -105,9 +120,18 @@ export default function Navbar() {
 										>
 											{link.name}
 										</a>
-										<div className="w-full h-[1px] bg-white"/>
+										<div className="w-full h-[1px] bg-white" />
 									</li>
 								))}
+									<li key="apply">
+										<a
+											href="applications"
+											className="block text-xl pb-5 "
+											onClick={handleHamburgerClick}
+										>
+											Apply
+										</a>
+									</li>
 							</ul>
 							<NavFooter />
 						</div>
