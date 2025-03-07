@@ -38,7 +38,7 @@ export default function AboutPage() {
 					</div>
 				</div>
 
-				<div>
+				<div className='md:pb-24'>
 					<div className="max-w-4xl mx-auto py-24 md:py-24 px-3 flex flex-col">
 						<div className="self-center flex items-center gap-10 md:pb-10">
 							<div className="w-10 md:w-20 bg-[#C5C5C5] h-[3px] rounded-full"></div>
@@ -47,7 +47,7 @@ export default function AboutPage() {
 							</h1>
 							<div className="w-10 md:w-20 bg-[#C5C5C5] h-[3px] rounded-full"></div>
 						</div>
-						<p className="text-lg pt-6 pb-6 px-4">
+						<p className="text-lg pt-6 pb-6 md:pb-32 px-4">
 							We’re tackling a challenging AI project that no one could achieve
 							alone—developing our skills, connecting with industry, and putting
 							Norway on the global AI map.

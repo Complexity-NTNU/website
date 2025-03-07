@@ -13,14 +13,14 @@ const phases: Phase[] = [
 		description: `1) Brand recognition
 2) Establish the organization
 3) Complete our first project
-4) Build core AI skills`,
+4) Build infrastructure`,
 	},
 	{
 		id: 'P2',
 		title: 'Second Project',
 		description: `1) Tackle a larger project
-2) Expand team expertise
-3) Increase project impact`,
+2) Strengthen team talent
+3) Increase project complexity`,
 	},
 	{
 		id: 'Pn',
