@@ -7,7 +7,7 @@ const RandomImage = () => {
 		<img
 			src={`https://picsum.photos/seed/${seed}/400/300`}
 			alt="Random placeholder"
-			className="rounded-3xl shadow flex-shrink-0 w-[200px] h-[150px] md:w-[400px] md:h-[300px] object-cover"
+			className="rounded-3xl shadow-md hover:scale-105 transition duration-300 flex-shrink-0 w-[200px] h-[150px] md:w-[400px] md:h-[300px] object-cover"
 		/>
 	);
 };

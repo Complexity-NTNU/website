@@ -1,7 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import Navbar from '@/components/page/navbar/Navbar';
-import Footer from '@/components/page/Footer';
+import Navbar from '@/components/objects/navbar/Navbar';
+import Footer from '@/components/objects/Footer';
 import rolesData from '@/data/roles.json';
 import Link from 'next/link';
 

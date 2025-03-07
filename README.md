@@ -1,5 +1,7 @@
 ## TODO
 - [ ] Fix logo not loading in footer in application/[slug]
+- [ ] Make every icon a svg
+- [ ] Improve styling on text "our roadmap" (maybe a card component?)
 
 ## Getting Started
 

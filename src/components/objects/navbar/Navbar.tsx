@@ -31,7 +31,7 @@ export default function Navbar() {
 
 	return (
 		<div
-			className={`fixed bg-[#F1F1F1] inset-x-0 top-0 z-10 border-b  ${isTop ? 'border-black/5' : 'border-none'}`}
+			className={`fixed bg-[#F1F1F1] inset-x-0 top-0  border-b z-50 ${isTop ? 'border-black/5' : 'border-none'}`}
 		>
 			<div className="max-w-[1440px] mx-auto">
 				<div className="flex h-16 md:h-20 justify-between items-center">

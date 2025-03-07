@@ -1,8 +1,8 @@
 // app/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import rolesData from '@/data/roles.json';
-import Navbar from '@/components/page/navbar/Navbar';
-import Footer from '@/components/page/Footer';
+import Navbar from '@/components/objects/navbar/Navbar';
+import Footer from '@/components/objects/Footer';
 
 interface Role {
 	name: string;
@@ -45,7 +45,9 @@ export default function RolePage({ params }: { params: { slug: string } }) {
 					<div className="max-w-3xl mx-auto p-4">
 						<div className="flex flex-col items-center gap-6 pb-20">
 							<p className="text-gray-400 opacity-50  text-sm ">Role</p>
-							<h1 className="text-3xl md:text-4xl lg:text-5xl text-center">{role.name}</h1>
+							<h1 className="text-3xl md:text-4xl lg:text-5xl text-center">
+								{role.name}
+							</h1>
 							<p className="text-zinc-600">
 								{role.category.charAt(0).toUpperCase() + role.category.slice(1)}
 							</p>
@@ -74,7 +76,7 @@ export default function RolePage({ params }: { params: { slug: string } }) {
 								</button>
 							</a>
 						</div>
-						<h1 className='font-bold pb-2'>About</h1>
+						<h1 className="font-bold pb-2">About</h1>
 						<p className="mb-12 text-lg">{role.description}</p>
 						<section className="mb-12">
 							<h2 className="font-bold pb-2">Responsibilities</h2>
