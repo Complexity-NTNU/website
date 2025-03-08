@@ -4,10 +4,14 @@ import { useEffect, useState } from 'react';
 import Navbar from '@/components/objects/navbar/Navbar';
 import Footer from '@/components/objects/Footer';
 import Brain from '@/components/objects/Brain';
+import HomepageBigCard from '@/components/objects/HomepageBigCard';
+import { clear } from 'console';
 
 export default function Home() {
 	const [showUndertitle, setShowUndertitle] = useState(false);
 	const [showBrain, setShowBrain] = useState(false);
+	const [showCard1, setShowCard1] = useState(false);
+	const [showCard2, setShowCard2] = useState(false);
 	const [seed, setSeed] = useState(Date.now());
 
 	const regenerateSeed = () => {
@@ -18,34 +22,39 @@ export default function Home() {
 	const images = Array.from({ length: imageCount });
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
-			setShowUndertitle(true);
-		}, 500);
-		const timer1 = setTimeout(() => {
-			setShowBrain(true);
-		}, 1000);
-		return () => {
-			clearTimeout(timer);
-			clearTimeout(timer1);
-		};
+		const timers = [
+			setTimeout(() => {
+				setShowUndertitle(true);
+			}, 300),
+			setTimeout(() => {
+				setShowBrain(true);
+			}, 1000),
+			setTimeout(() => {
+				setShowCard1(true);
+			}, 1200),
+			setTimeout(() => {
+				setShowCard2(true);
+			}, 1300),
+		];
+		return () => timers.forEach(clearTimeout);
 	}, []);
 
 	return (
 		<div>
 			<Navbar />
 			<main className="bg-[#D9D9D9]">
-				<div className="bg-[#F1F1F1] rounded-b-3xl md:rounded-b-[50px]">
-					<div className="relative h-[600px]  max-w-6xl mx-auto md:pt-52  pt-32 px-4 md:pl-10">
-						<div 
-						className={`absolute inset-0 pt-10 md:pt-2 transition-all duration-700 ${
-									showUndertitle
-										? 'opacity-100 translate-y-0 delay-300'
-										: 'opacity-0 translate-y-4'
-								}`}
+				<div className="bg-[#F1F1F1] shadow-md pb-96 md:pb-40 rounded-b-3xl md:rounded-b-[50px]">
+					<div className="relative h-[600px]   max-w-6xl mx-auto md:pt-52  pt-32 px-4 md:pl-10">
+						<div
+							className={`absolute inset-0  md:pt-2 transition-all duration-700 ${
+								showUndertitle
+									? 'opacity-100 translate-y-0 delay-300'
+									: 'opacity-0 translate-y-4'
+							}`}
 						>
 							<Brain />
 						</div>
-						<div className="relative z-10">
+						<div className="relative z-10 ">
 							<h1 className="animate-fadeUp w-fit flex gap-5 text-5xl md:text-6xl lg:text-7xl font-bold text-[#3B3B3B]">
 								Building the Future
 							</h1>
@@ -58,25 +67,45 @@ export default function Home() {
 							>
 								We educate the AI researchers of tomorrow
 							</div>
-						</div>
-					</div>
-					<div className="pb-32 overflow-hidden">
-						<div className="flex gap-8 animate-slide">
-							<RandomImage />
-							<RandomImage />
-							<RandomImage />
-							<RandomImage />
-							<RandomImage />
-							<RandomImage />
-							<RandomImage />
-							<RandomImage />
-							<RandomImage />
-							<RandomImage />
+							<div className="flex flex-wrap justify-center gap-8 py-24">
+								<div
+									className={`flex-1 transition-all duration-500 ${
+										showCard1
+											? 'opacity-100 translate-y-0 delay-300'
+											: 'opacity-0 translate-y-4'
+									}`}
+								>
+									<HomepageBigCard
+										category="About"
+										title="Our Vision"
+										body="We’re on a mission to develop world-class AI projects and partnerships, shaping Norway’s role in the global AI race."
+										buttonLink="/about"
+										buttonText="Read more"
+										background={true}
+									/>
+								</div>
+								<div
+									className={`flex-1 transition-all duration-500 ${
+										showCard2
+											? 'opacity-100 translate-y-0 delay-300'
+											: 'opacity-0 translate-y-4'
+									}`}
+								>
+									<HomepageBigCard
+										category="Apply"
+										title="Join the Project"
+										body="Collaborate on advanced AI projects, gain real-world experience, and help define the future of AI."
+										buttonLink="/applications"
+										buttonText="Get involved"
+										background={false}
+									/>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div>
-					<div className="max-w-4xl mx-auto py-16 md:py-52 px-3 flex flex-col">
+					<div className="max-w-4xl  mx-auto py-16 md:py-52 px-3 flex flex-col">
 						<div className="self-center flex items-center gap-10">
 							<div className="w-10 md:w-20 bg-[#C5C5C5] h-[3px] rounded-full"></div>
 							<h1 className="text-[#414141] text-3xl md:text-5xl font-bold">
@@ -102,7 +131,7 @@ export default function Home() {
 						</p>
 					</div>
 				</div>
-				<div className="bg-white rounded-t-3xl md:rounded-t-[50px] mb-10 md:mb-40">
+				<div className="bg-white  rounded-t-3xl md:rounded-t-[50px] mb-10 md:mb-40">
 					<div className="max-w-6xl mx-auto flex flex-col items-center md:flex-row py-4 md:pt-28 px-2">
 						<div className="p-10 md:pr-2">
 							<img
