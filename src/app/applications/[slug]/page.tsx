@@ -31,8 +31,8 @@ export default async function RolePage({
 }: {
 	params: { slug: string } | Promise<{ slug: string }>;
 }) {
-	// Await params to safely use its properties.
-	const { slug } = await params;
+	// Cast params to a Promise so we can safely await it.
+	const { slug } = await (params as Promise<{ slug: string }>);
 
 	const data = rolesData as RolesDataType;
 	const allRoles: Role[] = Object.values(data).flat();
