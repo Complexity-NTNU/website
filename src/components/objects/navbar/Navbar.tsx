@@ -123,15 +123,15 @@ export default function Navbar() {
 										<div className="w-full h-[1px] bg-white" />
 									</li>
 								))}
-									<li key="apply">
-										<a
-											href="applications"
-											className="block text-xl pb-5 "
-											onClick={handleHamburgerClick}
-										>
-											Apply
-										</a>
-									</li>
+								<li key="apply">
+									<a
+										href="applications"
+										className="block text-xl pb-5 "
+										onClick={handleHamburgerClick}
+									>
+										Apply
+									</a>
+								</li>
 							</ul>
 							<NavFooter />
 						</div>

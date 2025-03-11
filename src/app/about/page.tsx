@@ -38,7 +38,7 @@ export default function AboutPage() {
 					</div>
 				</div>
 
-				<div className='md:pb-24'>
+				<div className="md:pb-24">
 					<div className="max-w-4xl mx-auto py-24 md:py-24 px-3 flex flex-col">
 						<div className="self-center flex items-center gap-10 md:pb-10">
 							<div className="w-10 md:w-20 bg-[#C5C5C5] h-[3px] rounded-full"></div>

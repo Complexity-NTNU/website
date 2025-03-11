@@ -92,7 +92,9 @@ function NNScene() {
 	// Set rotation based on screen size.
 	// For smaller screens: rotate [-0.8, 0.3, 0]
 	// For md and up: rotate so that left is top/back and right is close/down, e.g. [-0.5, -0.4, 0]
-	const groupRotation: [number, number, number] = isMdUp ? [0.6, -0.5, 0] : [-1, 0.2, -1.8];
+	const groupRotation: [number, number, number] = isMdUp
+		? [0.6, -0.5, 0]
+		: [-1, 0.2, -1.8];
 
 	return (
 		<group rotation={groupRotation} position={[3, 1.5, -1]}>
