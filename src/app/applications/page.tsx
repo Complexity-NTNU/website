@@ -1,9 +1,9 @@
-'use client';
-import { useState, useRef, useEffect } from 'react';
-import Navbar from '@/components/objects/navbar/Navbar';
-import Footer from '@/components/objects/Footer';
-import rolesData from '@/data/roles.json';
-import Link from 'next/link';
+"use client";
+import { useState, useRef, useEffect } from "react";
+import Navbar from "@/components/objects/navbar/Navbar";
+import Footer from "@/components/objects/Footer";
+import rolesData from "@/data/roles.json";
+import Link from "next/link";
 
 interface Role {
 	name: string;
@@ -45,9 +45,9 @@ export default function Applications() {
 				setShowDropdown(false);
 			}
 		};
-		document.addEventListener('mousedown', handleClickOutside);
+		document.addEventListener("mousedown", handleClickOutside);
 		return () => {
-			document.removeEventListener('mousedown', handleClickOutside);
+			document.removeEventListener("mousedown", handleClickOutside);
 		};
 	}, []);
 
@@ -68,7 +68,7 @@ export default function Applications() {
 	const rolesCount: number = filteredRoles.length;
 
 	const slugify = (text: string): string => {
-		return text.toLowerCase().replace(/\s+/g, '-');
+		return text.toLowerCase().replace(/\s+/g, "-");
 	};
 
 	return (
@@ -110,7 +110,7 @@ export default function Applications() {
 												</svg>
 											</div>
 											<span className="ml-2 text-[0.92rem] capitalize">
-												{team.replace('_', ' ')}
+												{team.replace("_", " ")}
 											</span>
 										</label>
 									))}
@@ -153,7 +153,7 @@ export default function Applications() {
 								<div>
 									<h2 className="text-lg font-medium mb-1">{role.name}</h2>
 									<p className="text-gray-500 text-sm capitalize">
-										{category.replace('_', ' ')}
+										{category.replace("_", " ")}
 									</p>
 								</div>
 							</Link>

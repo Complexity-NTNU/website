@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface HomepageBigCardProps {
 	category: string;
@@ -21,8 +21,8 @@ export default function HomepageBigCard(props: HomepageBigCardProps) {
 				<button
 					className={`bg-[#3B3B3B] hover:bg-[#555555] transition duration-300  rounded-xl w-full py-3 px-4 ${
 						props.background
-							? 'bg-[#3B3B3B] text-white '
-							: 'bg-white border-2 border-black hover:border-[#555555] hover:text-white text-black'
+							? "bg-[#3B3B3B] text-white "
+							: "bg-white border-2 border-black hover:border-[#555555] hover:text-white text-black"
 					} `}
 				>
 					{props.buttonText}

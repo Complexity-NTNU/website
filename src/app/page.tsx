@@ -1,32 +1,21 @@
-'use client';
-import { useEffect, useState } from 'react';
-import Navbar from '@/components/objects/navbar/Navbar';
-import Footer from '@/components/objects/Footer';
-import Brain from '@/components/objects/Brain';
-import HomepageBigCard from '@/components/objects/HomepageBigCard';
+"use client";
+import { useEffect, useState } from "react";
+import Navbar from "@/components/objects/navbar/Navbar";
+import Footer from "@/components/objects/Footer";
+import Brain from "@/components/objects/Brain";
+import HomepageBigCard from "@/components/objects/HomepageBigCard";
+import Link from "next/link";
 
 export default function Home() {
 	const [showUndertitle, setShowUndertitle] = useState(false);
-	const [showBrain, setShowBrain] = useState(false);
 	const [showCard1, setShowCard1] = useState(false);
 	const [showCard2, setShowCard2] = useState(false);
-	const [seed, setSeed] = useState(Date.now());
-
-	const regenerateSeed = () => {
-		setSeed(Date.now());
-	};
-
-	const imageCount = 5;
-	const images = Array.from({ length: imageCount });
 
 	useEffect(() => {
 		const timers = [
 			setTimeout(() => {
 				setShowUndertitle(true);
 			}, 300),
-			setTimeout(() => {
-				setShowBrain(true);
-			}, 1000),
 			setTimeout(() => {
 				setShowCard1(true);
 			}, 1200),
@@ -46,8 +35,8 @@ export default function Home() {
 						<div
 							className={`absolute inset-0  md:pt-2 transition-all duration-700 ${
 								showUndertitle
-									? 'opacity-100 translate-y-0 delay-300'
-									: 'opacity-0 translate-y-4'
+									? "opacity-100 translate-y-0 delay-300"
+									: "opacity-0 translate-y-4"
 							}`}
 						>
 							<Brain />
@@ -59,8 +48,8 @@ export default function Home() {
 							<div
 								className={`pt-4 md:pt-10 text-xl md:text-2xl w-fit text-[#7C7C7C] italic transition-all duration-300 ${
 									showUndertitle
-										? 'opacity-100 translate-y-0 delay-300'
-										: 'opacity-0 translate-y-4'
+										? "opacity-100 translate-y-0 delay-300"
+										: "opacity-0 translate-y-4"
 								}`}
 							>
 								We educate the AI researchers of tomorrow
@@ -69,8 +58,8 @@ export default function Home() {
 								<div
 									className={`flex-1 transition-all duration-500 ${
 										showCard1
-											? 'opacity-100 translate-y-0 delay-300'
-											: 'opacity-0 translate-y-4'
+											? "opacity-100 translate-y-0 delay-300"
+											: "opacity-0 translate-y-4"
 									}`}
 								>
 									<HomepageBigCard
@@ -85,8 +74,8 @@ export default function Home() {
 								<div
 									className={`flex-1 transition-all duration-500 ${
 										showCard2
-											? 'opacity-100 translate-y-0 delay-300'
-											: 'opacity-0 translate-y-4'
+											? "opacity-100 translate-y-0 delay-300"
+											: "opacity-0 translate-y-4"
 									}`}
 								>
 									<HomepageBigCard
@@ -118,11 +107,11 @@ export default function Home() {
 							cutting-edge AI technologies.
 						</p>
 						<p className="pt-4 md:text-lg px-4">
-							We're seeking talented and driven students in computer science,
-							engineering, physics, and related fields to pioneer innovations in
-							artificial intelligence. Students passionate about marketing,
-							business, and leadership are also invited to help drive the
-							project's growth and visibility.
+							We&#39;re seeking talented and driven students in computer
+							science, engineering, physics, and related fields to pioneer
+							innovations in artificial intelligence. Students passionate about
+							marketing, business, and leadership are also invited to help drive
+							the project&#39;s growth and visibility.
 						</p>
 						<p className="pt-4 md:text-lg px-4">
 							Are you ready to shape the future of AI with Project 2026?
@@ -133,7 +122,7 @@ export default function Home() {
 					<div className="max-w-6xl mx-auto flex flex-col items-center md:flex-row py-4 md:pt-28 px-2">
 						<div className="p-10 md:pr-2">
 							<img
-								src={`https://picsum.photos/seed/${seed}/1500/1100`}
+								src={`https://picsum.photos/seed/${Date.now()}/1500/1100`}
 								alt="Random placeholder"
 								className="rounded-3xl"
 							/>
@@ -151,11 +140,11 @@ export default function Home() {
 									Join us to collaborate, innovate, and create something
 									noteworthy!
 								</p>
-								<a href="/applications">
+								<Link href="/applications">
 									<div className="bg-[#343434] text-[#F1F1F1] py-3 rounded-xl hover:bg-[#3A3A3A] transition w-44 text-center">
 										See open roles
 									</div>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

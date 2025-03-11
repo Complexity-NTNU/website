@@ -1,7 +1,7 @@
-import { notFound } from 'next/navigation';
-import rolesData from '@/data/roles.json';
-import Navbar from '@/components/objects/navbar/Navbar';
-import Footer from '@/components/objects/Footer';
+import { notFound } from "next/navigation";
+import rolesData from "@/data/roles.json";
+import Navbar from "@/components/objects/navbar/Navbar";
+import Footer from "@/components/objects/Footer";
 
 interface Role {
 	name: string;
@@ -14,7 +14,7 @@ interface Role {
 type RolesDataType = Record<string, Role[]>;
 
 const slugify = (text: string): string =>
-	text.toLowerCase().replace(/\s+/g, '-');
+	text.toLowerCase().replace(/\s+/g, "-");
 
 export async function generateStaticParams() {
 	const data = rolesData as RolesDataType;

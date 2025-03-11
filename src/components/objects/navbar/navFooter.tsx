@@ -24,7 +24,7 @@ export default function NavFooter() {
 			<div className="flex flex-col items-center pt-6 ">
 				<p className="text-white">© 2025 Compexity NTNU</p>
 				<p className="text-[#A1A1A1]">
-					Website create by Ari &{' '}
+					Website create by Ari &{" "}
 					<u>
 						<a href="https://nikolai.vip/">Nikolai</a>
 					</u>

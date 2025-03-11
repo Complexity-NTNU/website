@@ -1,9 +1,9 @@
-'use client';
-import { useEffect, useState } from 'react';
-import Navbar from '@/components/objects/navbar/Navbar';
-import Footer from '@/components/objects/Footer';
-import Image from 'next/image';
-import Roadmap from '@/components/objects/Roadmap';
+"use client";
+import { useEffect, useState } from "react";
+import Navbar from "@/components/objects/navbar/Navbar";
+import Footer from "@/components/objects/Footer";
+import Image from "next/image";
+import Roadmap from "@/components/objects/Roadmap";
 
 export default function AboutPage() {
 	const [showUndertitle, setShowUndertitle] = useState(false);
@@ -26,14 +26,14 @@ export default function AboutPage() {
 						<div
 							className={`pt-14 md:pt-20 px-4 text-xl md:text-2xl text-[#7C7C7C] italic transition-all duration-300 ${
 								showUndertitle
-									? 'opacity-100 translate-y-0 delay-300'
-									: 'opacity-0 translate-y-4'
+									? "opacity-100 translate-y-0 delay-300"
+									: "opacity-0 translate-y-4"
 							}`}
 						>
 							“Our mission is to become one of the most technically skilled AI
 							student organizations in the world, building partnerships with the
 							biggest AI companies, and paving a path for Norway to enter the
-							global AI race.”{' '}
+							global AI race.”{" "}
 						</div>
 					</div>
 				</div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
 						<div className="flex flex-wrap gap-8 justify-center pt-10">
 							<div className="bg-[#E5E5E5] shadow-md rounded-2xl w-64 h-80 flex flex-col justify-between pt-10 p-6 items-center hover:scale-105 transition duration-300">
 								<Image
-									src={'/gear_icon.png'}
+									src={"/gear_icon.png"}
 									width={100}
 									height={100}
 									alt="gear icon"
@@ -85,7 +85,7 @@ export default function AboutPage() {
 
 							<div className="bg-[#E5E5E5] shadow-md  rounded-2xl w-64 h-80 flex flex-col justify-around pb-8 px-6 items-center hover:scale-105 transition duration-300">
 								<Image
-									src={'/handshake_icon.png'}
+									src={"/handshake_icon.png"}
 									width={140}
 									height={140}
 									alt="gear icon"
@@ -102,7 +102,7 @@ export default function AboutPage() {
 
 							<div className="bg-[#E5E5E5] shadow-md rounded-2xl w-64 h-80 flex flex-col justify-between pt-10 p-6 items-center hover:scale-105 transition duration-300">
 								<Image
-									src={'/rocket_icon.png'}
+									src={"/rocket_icon.png"}
 									width={100}
 									height={100}
 									alt="gear icon pt-"

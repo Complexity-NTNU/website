@@ -28,38 +28,38 @@ body {
 }
 
 @font-face {
-	font-family: 'Rethink Sans';
-	src: url('/fonts/RethinkSans-100.woff2') format('woff2');
+	font-family: "Rethink Sans";
+	src: url("/fonts/RethinkSans-100.woff2") format("woff2");
 	font-weight: 100;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Rethink Sans';
-	src: url('/fonts/RethinkSans-300.woff2') format('woff2');
+	font-family: "Rethink Sans";
+	src: url("/fonts/RethinkSans-300.woff2") format("woff2");
 	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Rethink Sans';
-	src: url('/fonts/RethinkSans-400.woff2') format('woff2');
+	font-family: "Rethink Sans";
+	src: url("/fonts/RethinkSans-400.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Rethink Sans';
-	src: url('/fonts/RethinkSans-500.woff2') format('woff2');
+	font-family: "Rethink Sans";
+	src: url("/fonts/RethinkSans-500.woff2") format("woff2");
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Rethink Sans';
-	src: url('/fonts/RethinkSans-700.woff2') format('woff2');
+	font-family: "Rethink Sans";
+	src: url("/fonts/RethinkSans-700.woff2") format("woff2");
 	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Rethink Sans';
-	src: url('/fonts/RethinkSans-900.woff2') format('woff2');
+	font-family: "Rethink Sans";
+	src: url("/fonts/RethinkSans-900.woff2") format("woff2");
 	font-weight: 900;
 	font-style: normal;
 }

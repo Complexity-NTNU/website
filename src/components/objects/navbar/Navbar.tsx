@@ -1,7 +1,8 @@
-'use client';
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import NavFooter from './navFooter';
+"use client";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import NavFooter from "./navFooter";
+import Link from "next/link";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -12,10 +13,10 @@ export default function Navbar() {
 			setIsTop(window.scrollY === 0);
 		};
 
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener("scroll", handleScroll);
 
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
 
@@ -24,20 +25,20 @@ export default function Navbar() {
 	};
 
 	const navLinks = [
-		{ name: 'About', href: '/about' },
-		{ name: 'Members', href: '/members' },
-		{ name: 'Sponsors', href: '/sponsors' },
+		{ name: "About", href: "/about" },
+		{ name: "Members", href: "/members" },
+		{ name: "Sponsors", href: "/sponsors" },
 	];
 
 	return (
 		<div
-			className={`fixed bg-[#F1F1F1] inset-x-0 top-0  border-b z-50 ${isTop ? 'border-black/5' : 'border-none'}`}
+			className={`fixed bg-[#F1F1F1] inset-x-0 top-0  border-b z-50 ${isTop ? "border-black/5" : "border-none"}`}
 		>
 			<div className="max-w-[1440px] mx-auto">
 				<div className="flex h-16 md:h-20 justify-between items-center">
 					<div>
 						<div className="hidden md:block">
-							<a href="/">
+							<Link href="/">
 								<Image
 									src="/logo_with_text.svg"
 									width={250}
@@ -45,10 +46,10 @@ export default function Navbar() {
 									alt="Logo"
 									className="pl-4"
 								/>
-							</a>
+							</Link>
 						</div>
 						<div className="block md:hidden p-4">
-							<a href="/">
+							<Link href="/">
 								<Image
 									src="/logo.svg"
 									width={47}
@@ -56,7 +57,7 @@ export default function Navbar() {
 									className="h-full"
 									alt="Logo"
 								/>
-							</a>
+							</Link>
 						</div>
 					</div>
 					{/* Desktop Navigation */}
@@ -72,11 +73,11 @@ export default function Navbar() {
 									</a>
 								</li>
 							))}
-							<a href="/applications">
+							<Link href="/applications">
 								<div className="bg-[#343434] text-[#F1F1F1] px-8 py-2 rounded-xl hover:bg-[#3A3A3A] transition">
 									Apply
 								</div>
-							</a>
+							</Link>
 						</ul>
 					</div>
 					{/* Mobile Hamburger */}

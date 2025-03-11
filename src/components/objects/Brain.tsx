@@ -1,7 +1,7 @@
 // NeuralNetwork.tsx
-import React, { useMemo, useState, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import * as THREE from 'three';
+import React, { useMemo, useState, useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import * as THREE from "three";
 
 // Custom hook to detect media query match.
 function useMediaQuery(query: string) {
@@ -14,8 +14,8 @@ function useMediaQuery(query: string) {
 			setMatches(media.matches);
 		}
 		const listener = () => setMatches(media.matches);
-		media.addEventListener('change', listener);
-		return () => media.removeEventListener('change', listener);
+		media.addEventListener("change", listener);
+		return () => media.removeEventListener("change", listener);
 	}, [matches, query]);
 
 	return matches;
@@ -35,7 +35,7 @@ function NNScene() {
 	const tiltFactor = 3.0; // left-most layer gets z = -3, right-most layer gets z = 0
 
 	// Use media query hook to check if the screen is at least md (768px)
-	const isMdUp = useMediaQuery('(min-width: 768px)');
+	const isMdUp = useMediaQuery("(min-width: 768px)");
 
 	// Compute node positions for each layer.
 	const nodesPositions = useMemo(() => {
@@ -48,7 +48,7 @@ function NNScene() {
 			// Center the grid vertically (Y) and in depth (Z)
 			const offsetY = ((rows - 1) * rowSpacing) / 2;
 			const offsetZ = ((cols - 1) * colSpacing) / 2;
-			let layerNodes = [];
+			const layerNodes = [];
 			for (let i = 0; i < rows; i++) {
 				for (let j = 0; j < cols; j++) {
 					const y = i * rowSpacing - offsetY;
@@ -82,7 +82,7 @@ function NNScene() {
 	const connectionGeometry = useMemo(() => {
 		const geometry = new THREE.BufferGeometry();
 		geometry.setAttribute(
-			'position',
+			"position",
 			new THREE.Float32BufferAttribute(connections, 3),
 		);
 		return geometry;
@@ -115,7 +115,7 @@ export default function NeuralNetwork() {
 		<Canvas
 			camera={{ position: [10, 0, 15], fov: 50 }}
 			gl={{ alpha: true }}
-			style={{ background: 'transparent', width: '100%', height: '100%' }}
+			style={{ background: "transparent", width: "100%", height: "100%" }}
 		>
 			<ambientLight intensity={0.5} />
 			<NNScene />

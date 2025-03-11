@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
 export default function Footer() {
 	return (
 		<footer className="bg-[#1E1E1E] w-full">
@@ -13,12 +14,12 @@ export default function Footer() {
 						<div>
 							<h1 className="text-[#A1A1A1] pt-2 ">Social Media</h1>
 							<div className="text-xl">
-								<a href="/">
+								<Link href="/">
 									<p className="py-2">LinkedIn</p>
-								</a>
-								<a href="/">
+								</Link>
+								<Link href="/">
 									<p>Instagram</p>
-								</a>
+								</Link>
 							</div>
 						</div>
 						<div className="pl-10 md:pl-0">
@@ -49,7 +50,7 @@ export default function Footer() {
 				<div className="text-white">© 2025 Compexity NTNU</div>
 
 				<div className="text-[#565656]">
-					Creative Direction by Ari &{' '}
+					Creative Direction by Ari &{" "}
 					<a href="https://nikolai.vip/">
 						<u>Nikolai</u>
 					</a>
