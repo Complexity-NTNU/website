@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 }
 
 interface Params {
-	promise: Promise<any>;
+	promise: Promise<{ slug: string }>;
 	slug: string;
 }
 
