@@ -26,6 +26,7 @@ export async function generateStaticParams() {
 }
 
 interface Params {
+	promise: Promise<any>;
 	slug: string;
 }
 
