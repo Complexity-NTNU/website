@@ -1,6 +1,7 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
+import eslintPluginPrettier from "eslint-plugin-prettier"; // Use ES module import
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,9 +16,9 @@ const eslintConfig = [
   // Extend eslint-config-prettier to disable conflicting rules
   ...compat.extends("prettier"),
   {
-    // Load eslint-plugin-prettier
+    // Load eslint-plugin-prettier via the imported value
     plugins: {
-      prettier: require("eslint-plugin-prettier"),
+      prettier: eslintPluginPrettier,
     },
     rules: {
       // Run Prettier as an ESLint rule and report differences as errors

@@ -1,4 +1,3 @@
-// src/app/applications/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import rolesData from '@/data/roles.json';
 import Navbar from '@/components/objects/navbar/Navbar';
@@ -17,22 +16,17 @@ type RolesDataType = Record<string, Role[]>;
 const slugify = (text: string): string =>
 	text.toLowerCase().replace(/\s+/g, '-');
 
-// Generate all possible slugs for static generation
 export async function generateStaticParams() {
 	const data = rolesData as RolesDataType;
 	const allRoles: Role[] = Object.values(data).flat();
+
 	return allRoles.map((role) => ({
 		slug: slugify(role.name),
 	}));
 }
 
-// Define a PageProps type with a synchronous params object.
-type PageProps = {
-	params: { slug: string };
-};
-
-export default async function RolePage({ params }: PageProps) {
-	// Even though params is declared as synchronous, Next.js requires you to await it.
+export default async function RolePage({ params }: { params: any }) {
+	// If params is a promise, resolve it.
 	const { slug } = await Promise.resolve(params);
 
 	const data = rolesData as RolesDataType;
