@@ -5,6 +5,7 @@ import Footer from "@/components/objects/Footer";
 import Brain from "@/components/objects/Brain";
 import HomepageBigCard from "@/components/objects/HomepageBigCard";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
 	const [showUndertitle, setShowUndertitle] = useState(false);
@@ -121,9 +122,11 @@ export default function Home() {
 				<div className="bg-white  rounded-t-3xl md:rounded-t-[50px] mb-10 md:mb-40">
 					<div className="max-w-6xl mx-auto flex flex-col items-center md:flex-row py-4 md:pt-28 px-2">
 						<div className="p-10 md:pr-2">
-							<img
-								src={`https://picsum.photos/seed/${Date.now()}/1500/1100`}
+							<Image
+								src={"/placeholder.png"}
 								alt="Random placeholder"
+								width={600}
+								height={400}
 								className="rounded-3xl"
 							/>
 						</div>

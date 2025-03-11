@@ -3,44 +3,41 @@ import rolesData from "@/data/roles.json";
 import Navbar from "@/components/objects/navbar/Navbar";
 import Footer from "@/components/objects/Footer";
 
-interface Role {
-	name: string;
-	category: string;
-	description: string;
-	responsibilities: string[];
-	will_learn: string[];
+interface Props {
+	params: Promise<{ slug: string }>;
+	// Add searchParams even if unused
+	searchParams?: Promise<Record<string, string | string[]>>;
 }
-
-type RolesDataType = Record<string, Role[]>;
-
-const slugify = (text: string): string =>
-	text.toLowerCase().replace(/\s+/g, "-");
 
 export async function generateStaticParams() {
-	const data = rolesData as RolesDataType;
-	const allRoles: Role[] = Object.values(data).flat();
+	const data = rolesData as Record<
+		string,
+		Array<{
+			name: string;
+			category: string;
+			description: string;
+			responsibilities: string[];
+			will_learn: string[];
+		}>
+	>;
 
-	return allRoles.map((role) => ({
-		slug: slugify(role.name),
-	}));
+	return Object.values(data)
+		.flat()
+		.map((role) => ({
+			slug: role.name.toLowerCase().replace(/\s+/g, "-"),
+		}));
 }
 
-interface Params {
-	promise: Promise<{ slug: string }>;
-	slug: string;
-}
+export default async function RolePage(props: Props) {
+	// Await both params and searchParams
+	const [params] = await Promise.all([props.params, props.searchParams]);
+	const { slug } = params;
 
-export default async function RolePage({ params }: { params: Params }) {
-	// If params is a promise, resolve it.
-	const { slug } = await Promise.resolve(params);
+	const role = Object.values(rolesData)
+		.flat()
+		.find((r) => r.name.toLowerCase().replace(/\s+/g, "-") === slug);
 
-	const data = rolesData as RolesDataType;
-	const allRoles: Role[] = Object.values(data).flat();
-	const role = allRoles.find((role) => slugify(role.name) === slug);
-
-	if (!role) {
-		notFound();
-	}
+	if (!role) notFound();
 
 	return (
 		<div className="flex flex-col min-h-screen">
