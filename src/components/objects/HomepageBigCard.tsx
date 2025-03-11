@@ -19,10 +19,10 @@ export default function HomepageBigCard(props: HomepageBigCardProps) {
 			<p className="pb-8 ">{props.body}</p>
 			<a href={props.buttonLink}>
 				<button
-					className={`bg-[#3B3B3B] hover:bg-[#555555] transition duration-300 text-white rounded-xl w-full py-3 px-4 ${
+					className={`bg-[#3B3B3B] hover:bg-[#555555] transition duration-300  rounded-xl w-full py-3 px-4 ${
 						props.background
 							? 'bg-[#3B3B3B] text-white '
-							: 'border-2 border-black hover:border-[#555555] hover:text-white text-black bg-white '
+							: 'bg-white border-2 border-black hover:border-[#555555] hover:text-white text-black'
 					} `}
 				>
 					{props.buttonText}

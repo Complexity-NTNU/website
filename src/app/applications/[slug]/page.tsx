@@ -1,4 +1,4 @@
-// app/[slug]/page.tsx
+// app/applications/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import rolesData from '@/data/roles.json';
 import Navbar from '@/components/objects/navbar/Navbar';
@@ -14,9 +14,8 @@ interface Role {
 
 type RolesDataType = Record<string, Role[]>;
 
-const slugify = (text: string): string => {
-	return text.toLowerCase().replace(/\s+/g, '-');
-};
+const slugify = (text: string): string =>
+	text.toLowerCase().replace(/\s+/g, '-');
 
 export async function generateStaticParams() {
 	const data = rolesData as RolesDataType;
@@ -27,11 +26,18 @@ export async function generateStaticParams() {
 	}));
 }
 
-export default function RolePage({ params }: { params: { slug: string } }) {
+export default async function RolePage({
+	params,
+}: {
+	params: { slug: string } | Promise<{ slug: string }>;
+}) {
+	// Await params to safely use its properties.
+	const { slug } = await params;
+
 	const data = rolesData as RolesDataType;
 	const allRoles: Role[] = Object.values(data).flat();
 
-	const role = allRoles.find((role) => slugify(role.name) === params.slug);
+	const role = allRoles.find((role) => slugify(role.name) === slug);
 
 	if (!role) {
 		notFound();
@@ -44,7 +50,7 @@ export default function RolePage({ params }: { params: { slug: string } }) {
 				<div className="pt-28 md:pt-32 max-w-4xl mx-auto px-4">
 					<div className="max-w-3xl mx-auto p-4">
 						<div className="flex flex-col items-center gap-6 pb-20">
-							<p className="text-gray-400 opacity-50  text-sm ">Role</p>
+							<p className="text-gray-400 opacity-50 text-sm">Role</p>
 							<h1 className="text-3xl md:text-4xl lg:text-5xl text-center">
 								{role.name}
 							</h1>
@@ -52,7 +58,7 @@ export default function RolePage({ params }: { params: { slug: string } }) {
 								{role.category.charAt(0).toUpperCase() + role.category.slice(1)}
 							</p>
 							<a href="https://docs.google.com/forms/d/e/1FAIpQLSe968iTlLdVUBTj53ThZVLhtT67W7KQxtVznMGPJRnFP0IQXA/viewform?usp=dialog">
-								<button className="flex items-center gap-2 bg-white px-6 py-2 rounded-full ">
+								<button className="flex items-center gap-2 bg-white px-6 py-2 rounded-full">
 									<p>Apply now</p>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
