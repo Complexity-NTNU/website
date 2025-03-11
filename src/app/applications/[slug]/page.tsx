@@ -25,7 +25,11 @@ export async function generateStaticParams() {
 	}));
 }
 
-export default async function RolePage({ params }: { params: any }) {
+interface Params {
+	slug: string;
+}
+
+export default async function RolePage({ params }: { params: Params }) {
 	// If params is a promise, resolve it.
 	const { slug } = await Promise.resolve(params);
 

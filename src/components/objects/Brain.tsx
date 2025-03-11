@@ -1,7 +1,6 @@
 // NeuralNetwork.tsx
 import React, { useMemo, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 
 // Custom hook to detect media query match.
@@ -67,7 +66,7 @@ function NNScene() {
 
 	// Build connections: every node in one layer connects to every node in the next.
 	const connections = useMemo(() => {
-		const conn = [];
+		const conn: number[] = [];
 		for (let i = 0; i < nodesPositions.length - 1; i++) {
 			const currentLayer = nodesPositions[i];
 			const nextLayer = nodesPositions[i + 1];

@@ -1,11 +1,9 @@
 'use client';
-import RandomImage from '@/components/objects/RandomImage';
 import { useEffect, useState } from 'react';
 import Navbar from '@/components/objects/navbar/Navbar';
 import Footer from '@/components/objects/Footer';
 import Brain from '@/components/objects/Brain';
 import HomepageBigCard from '@/components/objects/HomepageBigCard';
-import { clear } from 'console';
 
 export default function Home() {
 	const [showUndertitle, setShowUndertitle] = useState(false);
