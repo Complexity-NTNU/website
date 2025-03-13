@@ -144,7 +144,7 @@ export default function Home() {
 									noteworthy!
 								</p>
 								<Link href="/applications">
-									<div className="bg-[#343434] text-[#F1F1F1] py-3 rounded-xl hover:bg-[#3A3A3A] transition w-44 text-center">
+									<div className="bg-[#1E4E98] text-[#F1F1F1] py-3 rounded-xl hover:bg-[#364967] transition w-44 text-center">
 										See open roles
 									</div>
 								</Link>

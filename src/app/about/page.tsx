@@ -17,14 +17,14 @@ export default function AboutPage() {
 		<div className="min-h-screen flex flex-col">
 			<Navbar />
 			<main className="bg-[#D9D9D9] flex-1">
-				<div className="bg-[#F1F1F1] rounded-b-3xl md:rounded-b-[50px] pb-40 md:pb-96 ">
-					<div className="max-w-6xl mx-auto md:pt-96  pt-32 px-4">
+				<div className="bg-[#F1F1F1] rounded-b-3xl md:rounded-b-[50px] pb-20 lg:pb-96 ">
+					<div className="max-w-6xl mx-auto lg:pt-96 sm:pt-44 pt-32 px-4">
 						<h1 className="animate-fadeUp sm:mx-20 md:mx-40  tracking-wide text-center text-4xl md:text-5xl lg:text-6xl font-bold text-[#3B3B3B] ">
 							Empowering Students to Shape the Future of AI
 						</h1>
 
 						<div
-							className={`pt-14 md:pt-20 px-4 text-xl md:text-2xl text-[#7C7C7C] italic transition-all duration-300 ${
+							className={`pt-10 md:pt-20 px-4 text-xl md:text-2xl text-[#7C7C7C] italic transition-all duration-300 ${
 								showUndertitle
 									? "opacity-100 translate-y-0 delay-300"
 									: "opacity-0 translate-y-4"

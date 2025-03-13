@@ -44,7 +44,7 @@ export default async function RolePage(props: Props) {
 			<Navbar />
 			<main className="bg-[#F1F1F1] flex-1 pb-40">
 				<div className="pt-28 md:pt-32 max-w-4xl mx-auto px-4">
-					<div className="max-w-3xl mx-auto p-4">
+					<div className="max-w-3xl mx-auto">
 						<div className="flex flex-col items-center gap-6 pb-20">
 							<p className="text-gray-400 opacity-50 text-sm">Role</p>
 							<h1 className="text-3xl md:text-4xl lg:text-5xl text-center">

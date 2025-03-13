@@ -74,7 +74,7 @@ export default function Navbar() {
 								</li>
 							))}
 							<Link href="/applications">
-								<div className="bg-[#343434] text-[#F1F1F1] px-8 py-2 rounded-xl hover:bg-[#3A3A3A] transition">
+								<div className="bg-[#1E4E98] text-[#F1F1F1] px-8 py-2 rounded-xl hover:bg-[#364967] transition">
 									Apply
 								</div>
 							</Link>
