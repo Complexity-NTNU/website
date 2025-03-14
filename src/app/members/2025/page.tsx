@@ -76,7 +76,6 @@ export default function Members() {
 					<div className=" max-w-6xl mx-auto">
 						{memberData.length > 0 && (
 							<div className="container mx-auto py-20">
-
 								{/* Filter Header */}
 								<div className="flex justify-between mb-8 pt-8 ">
 									<div className="text-[#7C7C7C]">{memberCount} members</div>

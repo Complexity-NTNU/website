@@ -128,11 +128,11 @@ export default function Home() {
 								</p>
 
 								<p className="md:text-lg">
-									We're seeking talented and driven students in computer
+									We&apos;re seeking talented and driven students in computer
 									science, engineering, physics, and related fields to pioneer
 									innovations in artificial intelligence. Students passionate
 									about marketing, business, and leadership are also invited to
-									help drive the project's growth and visibility.
+									help drive the project&apos;s growth and visibility.
 								</p>
 
 								<p className="md:text-xl text-lg font-semibold">
