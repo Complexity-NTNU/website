@@ -1,0 +1,57 @@
+[
+  {
+    "year": 2025,
+    "positions": [
+      {
+        "name": "Board",
+        "members": [
+          {
+            "name": "Nikolai G. Borbe",
+            "role": "President",
+            "email": "nikolaiborbe@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/nikolai-grytvik-borbe-347aa11a3/",
+            "github": "https://github.com/nikolaiborbe",
+            "image": "/2025/portraits/nikolaiborbe.png"
+          },
+          {
+            "name": "Trym Granås Helland",
+            "role": "Vice President",
+            "email": "hellandtrym@gmail.com"
+          },
+          {
+            "name": "Ari Olga Malieva",
+            "role": "Head of Finance & Branding",
+            "email": "malieva.olya@gmail.com"
+          },
+          {
+            "name": "Emil Guntvedt",
+            "role": "Chariman",
+            "email": "emil.guntvedt@gmail.com"
+          }
+        ]
+      },
+      {
+        "name": "Technical",
+        "members": [
+          {
+            "name": "Fredrik T. Borbe",
+            "role": "Lead Engineer",
+            "email": "fredrik.borbe@gmail.com",
+            "github": "https://github.com/Fredrik3B"
+          }
+        ]
+      },
+      {
+        "name": "DevOps",
+        "members": [
+          {
+            "name": "Felix Aasbø",
+            "role": "DevOps Lead",
+            "email": "felixleonaas@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/felix-aasb%C3%B8-004236324/"
+          }
+        ]
+      }
+    ]
+  }
+]

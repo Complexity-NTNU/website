@@ -31,7 +31,7 @@ export default function Home() {
 		<div>
 			<Navbar />
 			<main className="bg-[#D9D9D9]">
-				<div className="bg-[#F1F1F1] shadow-md pb-96 md:pb-40 rounded-b-3xl md:rounded-b-[50px]">
+				<div className="bg-[#F1F1F1] shadow-md pb-96 md:pb-40 ">
 					<div className="relative h-[600px]   max-w-6xl mx-auto md:pt-52  pt-32 px-4 md:pl-10">
 						<div
 							className={`absolute inset-0  md:pt-2 transition-all duration-700 ${
@@ -92,40 +92,63 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div>
-					<div className="max-w-4xl  mx-auto py-16 md:py-52 px-3 flex flex-col">
-						<div className="self-center flex items-center gap-10">
-							<div className="w-10 md:w-20 bg-[#C5C5C5] h-[3px] rounded-full"></div>
-							<h1 className="text-[#414141] text-3xl md:text-5xl font-bold">
-								Project 2026
-							</h1>
-							<div className="w-10 md:w-20 bg-[#C5C5C5] h-[3px] rounded-full"></div>
+				<div className="relative">
+					{/* Background Image Container - Ensure proper sizing */}
+					<div className="absolute inset-0 z-0 h-full">
+						<Image
+							src="/move_37.png"
+							alt="move 37"
+							fill
+							className="object-cover"
+							priority
+						/>
+						{/* Gradient overlay for inner shadow effect */}
+						<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.5)_0%,_rgba(0,0,0,0.9)_100%)]" />
+					</div>
+
+					{/* Content Container */}
+					<div className="relative z-10 max-w-6xl mx-auto py-16 md:py-52 px-5 ">
+						{/* Title Section */}
+						<div className="flex justify-center flex-col  w-fit">
+							<div className="flex justify-center items-center gap-4 mb-12">
+								<div className="w-10 md:w-20 bg-white/50 h-[2px] rounded-full" />
+								<h1 className="text-white text-3xl md:text-5xl font-bold">
+									Project 2026
+								</h1>
+								<div className="w-10 md:w-20 bg-white/50 h-[2px] rounded-full" />
+							</div>
+
+							{/* Text Content */}
+							<div className="max-w-2xl text-white space-y-6">
+								<p className="md:text-lg">
+									Join us in creating an ambitious AI project from the ground up
+									through 2025—2026. Our goal is to build intelligent, adaptive
+									systems capable of sophisticated decision-making, harnessing
+									cutting-edge AI technologies.
+								</p>
+
+								<p className="md:text-lg">
+									We're seeking talented and driven students in computer
+									science, engineering, physics, and related fields to pioneer
+									innovations in artificial intelligence. Students passionate
+									about marketing, business, and leadership are also invited to
+									help drive the project's growth and visibility.
+								</p>
+
+								<p className="md:text-xl text-lg font-semibold">
+									Are you ready to shape the future of AI with Project 2026?
+								</p>
+							</div>
 						</div>
-						<p className="pt-10 md:text-lg px-4">
-							Join us in creating an ambitious AI project from the ground up
-							through 2025—2026. Our goal is to build intelligent, adaptive
-							systems capable of sophisticated decision-making, harnessing
-							cutting-edge AI technologies.
-						</p>
-						<p className="pt-4 md:text-lg px-4">
-							We&#39;re seeking talented and driven students in computer
-							science, engineering, physics, and related fields to pioneer
-							innovations in artificial intelligence. Students passionate about
-							marketing, business, and leadership are also invited to help drive
-							the project&#39;s growth and visibility.
-						</p>
-						<p className="pt-4 md:text-lg px-4">
-							Are you ready to shape the future of AI with Project 2026?
-						</p>
 					</div>
 				</div>
-				<div className="bg-white  rounded-t-3xl md:rounded-t-[50px] mb-10 md:mb-40">
+				<div className="bg-white shadow-2xl max-h-screen  pb-10 md:pb-40">
 					<div className="max-w-6xl mx-auto flex flex-col items-center md:flex-row py-4 md:pt-28 px-2">
 						<div className="p-10 md:pr-2">
 							<Image
-								src={"/placeholder.png"}
+								src={"/students_working.jpeg"}
 								alt="Random placeholder"
-								width={600}
+								width={2000}
 								height={400}
 								className="rounded-3xl"
 							/>

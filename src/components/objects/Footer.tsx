@@ -4,7 +4,7 @@ export default function Footer() {
 	return (
 		<footer className="bg-[#1E1E1E] w-full">
 			<div className="p-2 hidden md:block">
-				<Image src="logo_white.svg" alt="logo" width={50} height={50} />
+				<Image src="/logo_white.svg" alt="logo" width={50} height={50} />
 			</div>
 
 			<div className="max-w-5xl mx-auto  flex md:justify-between justify-center p-8 pb-32">
