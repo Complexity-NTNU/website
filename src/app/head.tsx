@@ -3,7 +3,8 @@ export default function Head() {
 		<>
 			<meta name="color-scheme" content="light dark" />
 			<title>Complexity</title>
-			<link rel="icon" href="/favicon.ico" />
+			<link rel="shortcut icon" href="/favicon.ico" />
+			<link rel="apple-touch-icon" href="/favicon.ico" />
 		</>
 	);
 }
