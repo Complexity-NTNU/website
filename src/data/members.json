@@ -25,7 +25,7 @@
           },
           {
             "name": "Emil Guntvedt",
-            "role": "Chariman",
+            "role": "Board member",
             "email": "emil.guntvedt@gmail.com"
           }
         ]
@@ -46,8 +46,9 @@
         "members": [
           {
             "name": "Felix Aasbø",
-            "role": "DevOps Lead",
+            "role": "Lead DevOps",
             "email": "felixleonaas@gmail.com",
+            "github": "https://github.com/felixjohnsen",
             "linkedin": "https://www.linkedin.com/in/felix-aasb%C3%B8-004236324/"
           }
         ]
